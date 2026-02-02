@@ -43,13 +43,13 @@ def inline_builder(
 async def main_buttons(language: str) -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
 
-    app_link = "https://t.me/smmly_bot/app"
+    app_link = "https://smmly.pro/"
     support_link = "https://t.me/smmly_support"
     
     
     if language == 'ru':
         builder.button(
-            text="🚀 Запустить приложение",
+            text="🚀 Запустить",
             web_app=WebAppInfo(url=app_link)
         )
 

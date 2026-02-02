@@ -40,11 +40,9 @@ async def close_bot(bot: Bot) -> None:
 
 def setup_handlers(dp: Dispatcher):
     from app.handlers.users import commands, stars_payment
-    from app.middlewares.error_handling import error_router
     dp.include_routers(
         commands.router,
-        stars_payment.router,
-        error_router,
+        stars_payment.router
     )
 
 

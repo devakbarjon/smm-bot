@@ -1,6 +1,6 @@
 from aiogram import Router
 from aiogram.filters import CommandStart, Command
-from aiogram.types import Message, FSInputFile
+from aiogram.types import Message
 
 from app.filters.chat_filters import TypeFilter
 from app.keyboards.users.inline import main_buttons
@@ -18,7 +18,7 @@ async def cmd_start(message: Message):
     buttons = await main_buttons(language)
 
     await message.answer_photo(
-        photo=FSInputFile(get_start_image(language)),
+        photo=get_start_image(language),
         caption=start_message,
         reply_markup=buttons
     )
