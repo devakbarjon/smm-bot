@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def get_start_message(language: str | None, first_name: str) -> str:
     messages = {
         "en": f"Hello, {first_name}! Welcome to our SMM service bot. Use the menu below to navigate.",
@@ -19,8 +21,9 @@ def get_help_message(language: str) -> str:
 
 
 def get_start_image(language: str | None) -> str:
+    base = Path(__file__).resolve().parents[1] / "data" / "images"
     images = {
-        "en": "http://telegraph.controller.bot/files/1733486741/AgACAgIAAxkBAAIKSWl_qzb1kAbVmX3bBqIJDg6airwYAAJRDWsbAAHLAAFIKUQ5u-QcR9UBAAMCAAN5AAM4BA",
-        "ru": "http://telegraph.controller.bot/files/1733486741/AgACAgIAAxkBAAIKTWl_rHPMCqBt1s8S50OlO-ek_kj3AAJiDWsbAAHLAAFIAxDgGgvlOJ8BAAMCAAN4AAM4BA"
+        "en": base / "smm-banner-eng.png",
+        "ru": base / "smm-banner-ru.png",
     }
-    return images.get(language, images["en"])
+    return str(images.get(language, images["en"]))

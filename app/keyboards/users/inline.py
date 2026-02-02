@@ -43,40 +43,30 @@ def inline_builder(
 async def main_buttons(language: str) -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
 
-    app_link = "https://tg-web-app.live/"
-    channel_link = "https://t.me/ton_bux"
-    community_link = "https://t.me/tonbuxchat"
+    app_link = "https://t.me/smmly_bot/app"
+    support_link = "https://t.me/smmly_support"
+    
     
     if language == 'ru':
         builder.button(
-            text="💸 Начать зарабатывать",
+            text="🚀 Запустить приложение",
             web_app=WebAppInfo(url=app_link)
         )
 
         builder.button(
-            text="🫶 Подписаться на нас",
-            url=channel_link
-        )
-
-        builder.button(
-            text="💬 Вступить в сообщество",
-            url=community_link
+            text="💭 Написать в поддержку",
+            url=support_link
         )
 
     else:
         builder.button(
-            text="💸 Start earning",
+            text="🚀 Launch App",
             web_app=WebAppInfo(url=app_link)
         )
 
         builder.button(
-            text="🫶 Subscribe to us",
-            url=channel_link
-        )
-
-        builder.button(
-            text="💬 Join community",
-            url=community_link
+            text="💭 Contact Support",
+            url=support_link
         )
     
     builder.adjust(1)
