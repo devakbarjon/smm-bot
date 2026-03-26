@@ -36,7 +36,7 @@ def get_help_message(language: str) -> str:
 
 def get_start_image(language: str | None) -> str:
     images = {
-        "en": "http://telegraph.controller.bot/files/1733486741/AgACAgIAAxkBAAIKYGmAgyM6b2Sa_WjWXm-5vElSqb8DAAIFD2sb4BgBSFv87hDUR-ffAQADAgADeQADOAQ",
-        "ru": "http://telegraph.controller.bot/files/1733486741/BQACAgIAAxkBAAIKXGmAgwvi11lo-GzVfVVm4CosKRpwAAL6jQAC4BgBSHh_Z7QYAq4TOAQ"
+        "en": "http://telegraph.controller.bot/files/1733486741/AgACAgIAAxkBAAIKemnEqAkI_U4YLNZPLUgKz3H_yFzbAAJ1GWsbvYghSiESPzmFMcLvAQADAgADeQADOgQ",
+        "ru": "http://telegraph.controller.bot/files/1733486741/AgACAgIAAxkBAAIKdmnEp8D7XZbzThCjTchXvsEEHPY-AAJ0GWsbvYghStQhaLBET3FhAQADAgADeQADOgQ"
     }
     return images.get(language, images["en"])
