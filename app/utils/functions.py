@@ -25,10 +25,10 @@ def get_start_message(language: str | None, first_name: str) -> str:
 def get_help_message(language: str) -> str:
     messages = {
         "en": (
-            "If you have any questions or need assistance, feel free to reach out to our support team: @"
+            "If you have any questions or need assistance, feel free to reach out to our support team: @smmly_support"
         ),
         "ru": (
-            "Если у вас есть вопросы или вам нужна помощь, не стесняйтесь обращаться в нашу службу поддержки: @"
+            "Если у вас есть вопросы или вам нужна помощь, не стесняйтесь обращаться в нашу службу поддержки: @smmly_support"
         ),
     }
     return messages.get(language, messages["en"])
